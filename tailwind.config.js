@@ -6,6 +6,18 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      EstedadBlack: ["Estedad-Black", "sans-serif"],
+      EstedadBold: ["Estedad-Bold", "sans-serif"],
+      EstedadExtraBold: ["Estedad-ExtraBold", "sans-serif"],
+      EstedadExtraLight: ["Estedad-ExtraLight", "sans-serif"],
+      EstedadLight: ["Estedad-Light", "sans-serif"],
+      EstedadMedium: ["Estedad-Medium", "sans-serif"],
+      EstedadRegular: ["Estedad-Regular", "sans-serif"],
+      EstedadSemiBold: ["Estedad-SemiBold", "sans-serif"],
+      EstedadThin: ["Estedad-Thin", "sans-serif"],
+      
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
