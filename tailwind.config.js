@@ -6,6 +6,14 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors:{
+      ActiveColor: '#002f42',
+      AccentColor: '#00bebb',
+      TextColor: '#333',
+      SoftTextColor: '#00bebb',
+      WhiteTextColor: '#f0f0f0'
+      
+    },
     fontFamily: {
       EstedadBlack: ["Estedad-Black", "sans-serif"],
       EstedadBold: ["Estedad-Bold", "sans-serif"],

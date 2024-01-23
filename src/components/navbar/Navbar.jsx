@@ -1,14 +1,12 @@
 import React from 'react'
-import Link from 'next/link'
+import Links from './Links'
 
 const Navbar = () => {
   return (
-    <div>
+    <div className='bg-ActiveColor rounded-3xl flex py-5 px-3'>
         <div>Logo</div>
-        <div>
-            <Link href="/about"> درباره ما </Link>
-            <Link href="/contact"> تماس با ما </Link>
-            <Link href="/"> خانه </Link>
+        <div className='text-WhiteTextColor font-EstedadLight' >
+            <Links className=''/>
         </div>
 
     </div>

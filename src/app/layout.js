@@ -10,12 +10,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" dir="rtl" >
 
-      <body>
+      <body className="font-EstedadSemiBold text-TextColor my-5">
+        <div className=" w-full m-auto pl-[50px] pr-[50px] min-h-[100vh] flex flex-col justify-between ">
         <Navbar />
         {children}
         <Footer />
+        </div>
 
       </body>
     </html>
