@@ -9,6 +9,7 @@ module.exports = {
     colors:{
       ActiveColor: '#002f42',
       AccentColor: '#00bebb',
+      AlertColor: '#ff3232',
       TextColor: '#333',
       SoftTextColor: '#00bebb',
       WhiteTextColor: '#f0f0f0'

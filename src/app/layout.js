@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import AccountIcon from "@/components/navbar/AccountIcon";
 
 
 export const metadata = {
@@ -12,8 +13,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl" >
 
-      <body className="font-EstedadLight text-TextColor my-5">
-        <div className=" w-full m-auto pl-[50px] pr-[50px] min-h-[100vh] flex flex-col justify-between ">
+      <body className="font-EstedadLight text-TextColor my-0 sm:my-5">
+        <div className=" w-full m-auto px-1 sm:px-[50px] min-h-[100vh] flex flex-col justify-between">
         <Navbar />
         {children}
         <Footer />
