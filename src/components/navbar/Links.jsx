@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
+import MenuBTN from "./MenuBTN";
+import CloseBTN from "./CloseBTN";
 
 const links = [
   {
@@ -38,27 +40,44 @@ const links = [
 ];
 
 const Links = ({ className }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={`${className} `}>
+      <div className="hidden lg:block">
+        {links.map((link, index) => {
+          return <NavLink className="mx-4" linkItem={link} key={index} />;
+        })}
+      </div>
 
-      {links.map((link, index) => {
-        return <NavLink linkItem={link} key={index} />;
-      })}
+      <button
+        className="lg:hidden flex gap-2"
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
+        <MenuBTN />
+        منو
+      </button>
 
-      <button onClick={() => setIsOpen((prev) => !prev)}> منو </button>
-
-      {isOpen && (
-        <div className="absolute top-[83px] right-0 h-full w-1/4 bg-ActiveColor flex flex-col pt-10 gap-5 pr-6">
-          <button className="flex items-start mx-6 w-min p-4" onClick={()=> setIsOpen(false)}>
-            X
-          </button>
-          {links.map((link, index) => {
-            return <NavLink linkItem={link} key={index} />;
-          })}{" "}
-        </div>
-      )}
+      {/* <div className={`${!isOpen && 'hidden'}  tras absolute lg:top-[83px] top-[64px] right-0 h-full w-1/4 min-w-48 bg-ActiveColor flex flex-col pt-10 gap-5 px-6`}> */}
+      <div
+        className={`${
+          !isOpen && "translate-x-[100%]"
+        } transition-transform duration-300 translate-x-0 absolute lg:top-[83px] top-[64px] right-0 h-full w-1/4 min-w-48 bg-ActiveColor flex flex-col pt-10 gap-5 px-6`}
+      >
+        <button className="" onClick={() => setIsOpen(false)}>
+          <CloseBTN />
+        </button>
+        {links.map((link, index) => {
+          return (
+            <NavLink
+              className="bg-WhiteTextColor bg-opacity-10 px-3 py-1 rounded-2xl"
+              linkItem={link}
+              key={index}
+              onClick={() => setIsOpen(false)}
+            />
+          );
+        })}{" "}
+      </div>
     </div>
   );
 };

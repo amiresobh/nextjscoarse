@@ -3,15 +3,16 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NavLink = ({ linkItem }) => {
+const NavLink = ({ linkItem, className, onClick }) => {
   const pathname = usePathname();
 
   return (
     <Link
+      onClick={onClick}
       href={linkItem.path}
-      className={`mx-6 hover:text-AccentColor ${
-        pathname == linkItem.path && "!text-AccentColor"
-      } transition-colors`}
+      className={`${className} hover:text-AccentColor 
+      ${pathname == linkItem.path && "!text-AccentColor !font-EstedadBold "} 
+        transition-colors`}
     >
       {linkItem.title}{" "}
     </Link>
