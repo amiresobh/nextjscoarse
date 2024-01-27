@@ -54,15 +54,23 @@ const Links = ({ className }) => {
         className="lg:hidden flex gap-2"
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <MenuBTN />
-        منو
+        {!isOpen ? (
+          <>
+            <MenuBTN /> منو
+          </>
+        ) : (
+          <>
+            <CloseBTN /> بستن
+          </>
+        )}
       </button>
 
       {/* <div className={`${!isOpen && 'hidden'}  tras absolute lg:top-[83px] top-[64px] right-0 h-full w-1/4 min-w-48 bg-ActiveColor flex flex-col pt-10 gap-5 px-6`}> */}
+
       <div
         className={`${
           !isOpen && "translate-x-[100%]"
-        } transition-transform duration-300 translate-x-0 absolute lg:top-[83px] top-[64px] right-0 h-full w-1/4 min-w-48 bg-ActiveColor flex flex-col pt-10 gap-5 px-6`}
+        } lg:hidden transition-transform duration-300 translate-x-0 absolute lg:top-[83px] top-[64px] right-0 h-[100vh] w-1/4 min-w-48 bg-ActiveColor flex flex-col pt-10 gap-5 px-6`}
       >
         <button className="" onClick={() => setIsOpen(false)}>
           <CloseBTN />
