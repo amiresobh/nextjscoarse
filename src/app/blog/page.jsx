@@ -1,8 +1,14 @@
+import PostCard from '@/components/postCard/PostCard'
 import React from 'react'
 
 const BlogPage = () => {
   return (
-    <div>BlogPage</div>
+    <div>
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+    </div>
   )
 }
 
