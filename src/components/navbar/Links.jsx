@@ -68,9 +68,10 @@ const Links = ({ className }) => {
       {/* <div className={`${!isOpen && 'hidden'}  tras absolute lg:top-[83px] top-[64px] right-0 h-full w-1/4 min-w-48 bg-ActiveColor flex flex-col pt-10 gap-5 px-6`}> */}
 
       <div
-        className={`${
+        className={`
+        ${
           !isOpen && "translate-x-[100%]"
-        } lg:hidden transition-transform duration-300 translate-x-0 absolute lg:top-[83px] top-[64px] right-0 h-[100vh] w-1/4 min-w-48 bg-ActiveColor flex flex-col pt-10 gap-5 px-6`}
+        }  lg:hidden transition-all duration-300 translate-x-0 absolute lg:top-[83px] top-[64px] right-0 h-[100vh] w-1/4 min-w-48 bg-ActiveColor flex flex-col pt-10 gap-5 px-6`}
       >
         <button className="" onClick={() => setIsOpen(false)}>
           <CloseBTN />
