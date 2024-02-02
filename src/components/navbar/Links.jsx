@@ -18,7 +18,7 @@ const links = [
     path: "/schedule",
   },
   {
-    title: "اخبار و مقالات",
+    title: "مقالات",
     path: "/blog",
   },
   {
@@ -26,8 +26,8 @@ const links = [
     path: "/learnings",
   },
   {
-    title: "فرم ها",
-    path: "/forms",
+    title: "نتیجه آزمایش",
+    path: "/results",
   },
   {
     title: "درباره ما",

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 import cover from "@/images/cover.jpg";
 const PostCard = () => {
   return (
@@ -10,12 +11,12 @@ const PostCard = () => {
           <span className="text-base -rotate-12 bg-TextColor bg-opacity-20 rounded-full p-1 float-end -mx-5">
             1402.01.01{" "}
           </span>
-          <Image
-            className="object-cover -z-50"
-            src={cover}
-            alt="Blog_Image"
-            fill
-          />
+            <Image
+              className="object-cover -z-50"
+              src={cover}
+              alt="Blog_Image"
+              fill
+            />
         </div>
       </div>
       <div>

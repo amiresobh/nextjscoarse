@@ -1,7 +1,7 @@
 import React from "react";
 import Links from "./Links";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 import AccountIcon from "./AccountIcon";
 import logo from "@/app/assets/imgaes/logo.png";
 
@@ -12,8 +12,8 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-10 lg:w-11/12 self-center bg-ActiveColor rounded-bl-xl lg:rounded-3xl flex py-5 px-3 justify-around items-center text-WhiteTextColor h-16">
       <div className="relative w-24 h-24">
-        <Link href='/'>
-        <Image src={logo} alt="logo" fill />
+        <Link href="/">
+          <Image src={logo} alt="logo" fill />
         </Link>
       </div>
 
