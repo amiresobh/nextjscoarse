@@ -17,13 +17,17 @@ const PostDetails = async ({ post }) => {
         />
       </div>
       <div className="flex text-sm gap-5">
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1">
           <span className="text-AccentColor">نویسنده </span>
           <span> {user.username} </span>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1">
           <span className="text-AccentColor">تاریخ</span>
-          <span> 1402.01.01</span>
+          <span>
+            {" "}
+            {post.createdAt.getFullYear()}/{post.createdAt.getMonth()}/
+            {post.createdAt.getDay()}{" "}
+          </span>
         </div>
       </div>
     </div>

@@ -7,6 +7,13 @@ const Map = dynamic(() => import("@/components/map/Map"), {
   ssr: false,
   loading: () => <p>A map is Loading</p>,
 });
+
+export const metadata = {
+  title:' درباره ما',
+  description: "مرکز طب کار آیین، ارائه کلیه خدمات سلامت شغلی",
+};
+
+
 const AboutPage = () => {
   return (
     <div>

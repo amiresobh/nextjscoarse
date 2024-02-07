@@ -8,10 +8,10 @@ const FormCard = ({svg}) => {
       </div>
       <div className="flex flex-col gap-5 w-full">
         <h1 className="font-EstedadExtraBold text-xl lg:text-2xl !leading-tight ">
-          ارتباط مستقیم با مرکز
+          ارتباط مستقیم با ما
         </h1>
         <div className="font-EstedadBold">
-          <form action="" className="flex flex-col gap-7 !w-full ">
+          <form action='' className="flex flex-col gap-7 !w-full ">
             <input
               type="text"
               placeholder="نام شما"

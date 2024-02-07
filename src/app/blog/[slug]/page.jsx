@@ -4,12 +4,14 @@ import Image from "next/image";
 import PostDetails from "./postDetails";
 import { get_post } from "@/lib/data";
 
-const getData = async (slug) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
-
-  if (!res.ok) throw new Error("خطایی رخ داده");
-
-  return res.json();
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const post = await get_post(decodeURIComponent(slug));
+  
+  return {
+    title: post.title,
+    description: post.body,
+  };
 };
 
 const SinglePostPage = async ({ params }) => {

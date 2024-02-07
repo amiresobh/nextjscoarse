@@ -9,6 +9,10 @@ import MapCard from "./Components/MapCard";
 import FormCard from "./Components/FormCard";
 // import Map from "@/components/map/Map";
 
+export const metadata = {
+  title:'تماس با ما',
+  description: "مرکز طب کار آیین، ارائه کلیه خدمات سلامت شغلی",
+};
 
 const Contact = () => {
   return (
