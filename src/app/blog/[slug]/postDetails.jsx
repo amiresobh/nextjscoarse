@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import { get_user } from "@/lib/data";
+import { get_user_by_userId } from "@/lib/dbGetFunctions";
 
 const PostDetails = async ({ post }) => {
-  const user = await get_user(post.userId);
+  const user = await get_user_by_userId(post.userId);
 
   return (
     <div className="flex gap-3 items-center">

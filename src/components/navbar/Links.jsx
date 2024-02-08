@@ -46,7 +46,7 @@ const Links = ({ className }) => {
     <div className={`${className} `}>
       <div className="hidden lg:block">
         {links.map((link, index) => {
-          return <NavLink className="mx-4" linkItem={link} key={index} />;
+          return <NavLink className="mx-3" linkItem={link} key={index} />;
         })}
       </div>
 

@@ -1,12 +1,8 @@
 import PostCard from "@/components/postCard/PostCard";
 import React from "react";
-import { get_posts } from "../../lib/data";
-import { create_user } from "@/lib/createUser";
-import { create_post } from "@/lib/createPost";
+import { get_posts } from "../../lib/dbGetFunctions";
 
 const BlogPage = async () => {
-  // const new_post = await create_post()
-  // console.log(new_post)    
 
   const posts = await get_posts();
 

@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import Image from "next/image";
 
 import PostDetails from "./postDetails";
-import { get_post } from "@/lib/data";
+import { get_post } from "@/lib/dbGetFunctions";
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
